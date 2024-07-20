@@ -1,0 +1,55 @@
+Day-6
+> Question-1
+public class Palindrome {
+
+    public static boolean isPalindrome(String str) {
+        String revStr = new StringBuilder(str).reverse().toString();
+        return str.equals(revStr);
+    }
+
+    public static void main(String[] args) {
+        String[] str = {"malayalam", "heaven", "madam", "independent"};
+
+        for (String i : str) {
+            System.out.println("\"" + i + "\" is " + (isPalindrome(i) ? "a palindrome." : "not a palindrome."));
+        }
+    }
+}
+
+> Question 2
+public class MatrixAddition {
+    public static int[][] addMatrices(int[][] matrix1, int[][] matrix2) {
+        int row=matrix1.length;
+        int col=matrix1[0].length;
+        int[][] result = new int[row][col];
+        for(int i=0;i<row;i++) {
+            for(int j=0;j<col;j++) {
+                result[i][j] = matrix1[i][j] + matrix2[i][j];
+            }
+        }
+        return result;
+    }
+
+    public static void main(String[] args) {
+        int[][] matrix1 = {
+            {81, 12, 91},
+            {26, 51, 60},
+            {71, 81, 16}
+        };
+
+        int[][] matrix2 = {
+            {76, 82, 73},
+            {61, 15, 46},
+            {39, 20, 11}
+        };
+
+        int[][] result = addMatrices(matrix1, matrix2);
+
+        for (int i = 0; i < result.length; i++) {
+            for (int j = 0; j < result[0].length; j++) {
+                System.out.print(result[i][j] + " ");
+            }
+            System.out.println();
+        }
+    }
+}
