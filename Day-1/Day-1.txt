@@ -1,0 +1,74 @@
+Day-1
+
+> Question-1
+
+import java.util.Scanner;
+class Calc {
+int x, y;
+String op;
+public Calc(int x, int y, String op) {
+this.x = x;
+this.y = y;
+this.op = op;
+}
+public String calculate() {
+switch (op) {
+case "Addition":
+return String.valueOf(x + y);
+case "Subtraction":
+return String.valueOf(x - y);
+case "Multiplication":
+return String.valueOf(x * y);
+case "Division":
+if (y != 0) {
+return String.valueOf(x / y);
+} else {
+return "Cannot divide by zero";
+}
+case "Modulus":
+return String.valueOf(x % y);
+default:
+return "Cannot perform the operation";
+}
+}
+
+public static void main(String[] args) {
+Scanner scanner = new Scanner(System.in);
+int x = scanner.nextInt();
+int y = scanner.nextInt();
+scanner.nextLine();
+String op = scanner.nextLine();
+Calc z = new Calc(x, y, op);
+String result = z.calculate();
+System.out.println(result);
+}
+}
+
+
+
+> Question-2
+
+import java.util.Scanner;
+
+public class Prime {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int num = scanner.nextInt();
+        int count = 0;
+        for (int i = 1; i <= num; i++) {
+            if (num % i == 0) {
+                count++;
+            }
+        }
+        if (count == 2) {
+            System.out.println("It is a prime number");
+        } else {
+            System.out.println("Not a prime number");
+        }
+        scanner.close();
+    }
+}
+
+
+
+
