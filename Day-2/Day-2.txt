@@ -1,0 +1,46 @@
+Day-2
+
+> Question-1
+
+public class FactorFinding {
+
+    public static void main(String[] args) {
+        int num = 20; 
+        findFactor(num);
+    }
+
+    public static void findFactor(int num) {
+        for (int i = 1; i <= num; i++) {
+            if (num % i == 0) {
+                System.out.println(i);
+            }
+        }
+    }
+}
+
+
+
+
+> Question-2
+
+public class StringReverse {
+
+    public static void main(String[] args) {
+        String string = "Reversed String";
+        String revString = revString(string);
+        System.out.println(string);
+        System.out.println(revString);
+    }
+
+    public static String revString(String str) {
+        if (str == null || str.isEmpty()) {
+            return str;
+        }
+        StringBuilder reversed = new StringBuilder(str);
+        return reversed.reverse().toString();
+    }
+}
+
+
+
+
